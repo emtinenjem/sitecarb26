@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { renderEmailTemplate } from './_email-template'
+import { renderEmailTemplate } from './_email-template.js'
 
 const TEAM_INBOX = process.env.CONTACT_INBOX || 'contact@photocarb.com'
 const FROM_ADDRESS = process.env.RESEND_FROM || 'Photocarb <notifications@photocarb.com>'
