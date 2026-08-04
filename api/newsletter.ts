@@ -32,14 +32,23 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   const internalHtml = renderEmailTemplate({
     preheader: `New newsletter signup: ${email}`,
+    badge: 'notification',
+    eyebrow: 'Website · Newsletter',
     heading: 'New Newsletter Signup',
     intro: `${email} just subscribed to the Photocarb newsletter from the website footer.`,
   })
 
   const welcomeHtml = renderEmailTemplate({
     preheader: "You're subscribed to Photocarb's newsletter.",
+    badge: 'success',
+    eyebrow: 'Newsletter',
     heading: "You're on the list.",
-    intro: 'Thanks for subscribing. We\'ll send you occasional updates on CBAM, ANME, and IFRS S2 changes that affect Tunisian industry — no more than once a month.',
+    intro: 'Thanks for subscribing. Here\'s what to expect in your inbox — no more than once a month.',
+    bullets: [
+      'CBAM, ANME, and IFRS S2 regulatory changes that affect Tunisian industry',
+      'Practical breakdowns, not legal jargon',
+      'No spam, and you can opt out anytime by replying to this email',
+    ],
     ctaLabel: 'Explore Photocarb',
     ctaUrl: 'https://photocarb.com',
   })
@@ -50,8 +59,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // campaigns later, connect this endpoint to Resend Audiences (or Mailchimp/etc.)
     // and call their "add contact" API here as well.
     const emails = [
-      { from: FROM_ADDRESS, to: [TEAM_INBOX], subject: 'New newsletter signup', html: internalHtml },
-      { from: FROM_ADDRESS, to: [email], subject: "You're subscribed to Photocarb", html: welcomeHtml },
+      { from: FROM_ADDRESS, to: [TEAM_INBOX], reply_to: email, subject: 'New newsletter signup', html: internalHtml },
+      { from: FROM_ADDRESS, to: [email], reply_to: TEAM_INBOX, subject: "You're subscribed to Photocarb", html: welcomeHtml },
     ]
 
     for (const emailPayload of emails) {

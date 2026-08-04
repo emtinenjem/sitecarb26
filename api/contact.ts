@@ -52,10 +52,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   const internalHtml = renderEmailTemplate({
     preheader: `New discovery call request from ${fullName} (${body.company})`,
+    badge: 'notification',
+    eyebrow: 'Website · Contact Form',
     heading: 'New Discovery Call Request',
-    intro: `${fullName} from ${body.company} just booked a discovery session through the website.`,
+    intro: `${fullName} from ${body.company} just booked a discovery session through the website. Reply to this email to respond directly to them.`,
     rows: [
       { label: 'Name', value: fullName },
+      { label: 'Email', value: body.email || '' },
+      { label: 'Phone', value: body.phone || '' },
       { label: 'Company', value: body.company || '' },
       { label: 'Job Title', value: body.jobTitle || '' },
       { label: 'Sector', value: body.sector || '' },
@@ -70,8 +74,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   const confirmationHtml = renderEmailTemplate({
     preheader: 'Your discovery session request has been received.',
+    badge: 'success',
+    eyebrow: 'Discovery Session',
     heading: 'Session request received.',
     intro: `Hi ${body.firstName}, thanks for reaching out to Photocarb. A Sousse-based solutions engineer will confirm your slot within 4 business hours.`,
+    bullets: [
+      'A solutions engineer reviews your request and sector',
+      'You get a calendar invite for your preferred time slot',
+      'We run a live walkthrough tailored to your compliance needs',
+    ],
     bodyHtml: `<p style="margin:0;">In the meantime, feel free to reply directly to this email with any questions.</p>`,
     ctaLabel: 'Visit Photocarb',
     ctaUrl: 'https://photocarb.com',
