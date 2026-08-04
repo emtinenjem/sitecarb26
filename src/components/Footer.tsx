@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from './LocalizedLink'
 import PhotoCarbLogo from './PhotoCarbLogo'
 import { SERVICES, localizeService, getServiceById } from '../data/services'
 import { QatarFlag, TunisiaFlag } from './Flags'

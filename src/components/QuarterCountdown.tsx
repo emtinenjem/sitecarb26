@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from './LocalizedLink'
 import { useLang } from '../i18n/LanguageContext'
 import { IconClock } from './icons'
 

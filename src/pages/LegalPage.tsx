@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
-import { Link, Navigate, useParams } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
+import { Link } from '../components/LocalizedLink'
 import { LEGAL_DOCS, getLegalDoc, localizeLegalDoc } from '../data/legal'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import FinalCTA from '../components/FinalCTA'
@@ -7,7 +8,7 @@ import { useLang } from '../i18n/LanguageContext'
 
 export default function LegalPage() {
   const { slug } = useParams<{ slug: string }>()
-  const { t, lang } = useLang()
+  const { t, lang, localizePath } = useLang()
   const base = slug ? getLegalDoc(slug) : undefined
   const doc = base ? localizeLegalDoc(base, lang) : undefined
   const localizedOthers = LEGAL_DOCS.filter(d => d.slug !== slug).map(d => localizeLegalDoc(d, lang))
@@ -21,7 +22,7 @@ export default function LegalPage() {
     doc?.summary,
   )
 
-  if (!doc) return <Navigate to="/" replace />
+  if (!doc) return <Navigate to={localizePath('/')} replace />
 
   const others = localizedOthers
 

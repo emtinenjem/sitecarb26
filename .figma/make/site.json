@@ -1,7 +1,15 @@
 {
-  "description": "An AI-powered Carbon Intelligence Platform designed for Gulf industrial operators, helping them measure, reduce, and comply with carbon emissions efficiently.",
+  "title": "Photocarb | AI Carbon Intelligence for Tunisian & Gulf Industry",
+  "description": "Bilan carbone, CBAM declarations, ESG reports, and Life Cycle Assessment — delivered in 48 hours from your real operational data. Built in Sousse, Tunisia.",
+  "language": "en",
   "robots": {
-    "index": false
+    "index": true
+  },
+  "icons": {
+    "icon": "/images/logo.png"
+  },
+  "openGraph": {
+    "image": "https://photocarb.com/images/logo.png"
   },
   "accessibility": {
     "addBypassLinks": false,

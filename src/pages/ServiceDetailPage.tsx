@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
-import { Link, Navigate, useParams } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
+import { Link } from '../components/LocalizedLink'
 import { SERVICES, SERVICE_DELIVERY_STEPS, SERVICE_DELIVERY_STEPS_AR, SERVICE_DELIVERY_STEPS_FR, getServiceById, localizeService } from '../data/services'
 import CBAMCalculator from '../components/CBAMCalculator'
 import EsgScoreCalculator from '../components/EsgScoreCalculator'
@@ -15,14 +16,14 @@ import { useLang } from '../i18n/LanguageContext'
 
 export default function ServiceDetailPage() {
   const { slug } = useParams<{ slug: string }>()
-  const { t, lang } = useLang()
+  const { t, lang, localizePath } = useLang()
   const base = slug ? getServiceById(slug) : undefined
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [slug])
 
-  if (!base) return <Navigate to="/services" replace />
+  if (!base) return <Navigate to={localizePath('/services')} replace />
 
   const s = localizeService(base, lang)
   const Icon = s.icon

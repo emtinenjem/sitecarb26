@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from '../components/LocalizedLink'
 import CertMarquee from '../components/CertMarquee'
 import IntegrationArch from '../components/IntegrationArch'
 import MetricsStrip from '../components/MetricsStrip'

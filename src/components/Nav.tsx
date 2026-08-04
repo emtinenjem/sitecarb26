@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
+import { Link } from './LocalizedLink'
 import PhotoCarbLogo from './PhotoCarbLogo'
 import { SERVICES, localizeService } from '../data/services'
-import { useLang, LANG_ORDER, LANG_LABELS, LANG_NAMES } from '../i18n/LanguageContext'
+import { useLang, LANG_ORDER, LANG_LABELS, LANG_NAMES, getBarePath } from '../i18n/LanguageContext'
 import { IconGlobe } from './icons'
 
 const SCROLL_THRESHOLD = 80
@@ -57,7 +58,8 @@ export default function Nav() {
     closeTimer.current = setTimeout(() => setServicesOpen(false), 150)
   }
 
-  const isServicesActive = location.pathname === '/services'
+  const barePath = getBarePath(location.pathname)
+  const isServicesActive = barePath === '/services'
 
   return (
     <nav
@@ -155,7 +157,7 @@ export default function Nav() {
           </div>
 
           {LINKS.map(l => {
-            const isActive = location.pathname === l.to
+            const isActive = barePath === l.to
             return (
               <Link
                 key={l.to}

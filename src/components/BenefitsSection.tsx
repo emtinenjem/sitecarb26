@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from './LocalizedLink'
 import { useInView } from '../hooks/useInView'
 import { useOdometer } from '../hooks/useOdometer'
 import { IconCheck } from './icons'
