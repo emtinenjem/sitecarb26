@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from './LocalizedLink'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { getServiceById, localizeService } from '../data/services'
 import { useLang } from '../i18n/LanguageContext'
@@ -71,7 +71,7 @@ export default function CarbonMolecule({ className = '' }: CarbonMoleculeProps) 
       />
 
       {/* Outer coordinate space — SVG (network diagram) and HTML (crisp labels) share the same 0–300 box */}
-      <div className="relative h-[min(380px,84vw)] w-[min(380px,84vw)] md:h-[420px] md:w-[420px]">
+      <div className="relative h-[min(380px,84vw)] w-[min(380px,84vw)] md:h-[420px] md:w-[420px] lg:h-[460px] lg:w-[460px]">
         <svg viewBox="0 0 300 300" className="absolute inset-0 h-full w-full" style={{ overflow: 'visible' }}>
           <defs>
             <linearGradient id="cm-ring" x1="0%" y1="0%" x2="100%" y2="100%">

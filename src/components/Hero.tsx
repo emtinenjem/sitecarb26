@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from './LocalizedLink'
 import { AnimatePresence, motion } from 'framer-motion'
 import CarbonMolecule from './CarbonMolecule'
 import { SERVICES, localizeService } from '../data/services'
@@ -12,7 +12,6 @@ export default function Hero() {
   const { t, lang } = useLang()
   const headlineLines = [t('hero.titleLine1'), t('hero.titleLine2')].filter(Boolean)
   const keywords = SERVICES.map(s => localizeService(s, lang).title)
-  const trustBadges = ['ISO 14064', 'IFRS S2', t('hero.trilingualReports'), t('hero.noHardware')]
 
   useEffect(() => {
     const t = setInterval(() => setKIdx(i => (i + 1) % keywords.length), 2200)
@@ -20,7 +19,7 @@ export default function Hero() {
   }, [keywords.length])
 
   return (
-    <section className="relative min-h-screen bg-[var(--color-bg)] pt-16 overflow-hidden">
+    <section className="relative min-h-screen bg-[var(--color-bg)] pt-16 overflow-hidden flex flex-col">
       {/* Soft background texture */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -29,8 +28,8 @@ export default function Hero() {
         }}
       />
 
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 pt-16 lg:pt-20 pb-24">
-        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-16 items-start">
+      <div className="relative flex-1 flex items-center max-w-[1400px] mx-auto w-full px-6 lg:px-12 py-16 lg:py-14">
+        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-16 items-center w-full">
           {/* Left — copy */}
           <div className="flex flex-col gap-6">
             {/* Eyebrow */}
@@ -124,29 +123,18 @@ export default function Hero() {
             >
               {t('hero.description')}
             </motion.p>
-          </div>
 
-          {/* Right — Hex Network + actions */}
-          <div className="flex flex-col items-center gap-7">
-            <motion.div
-              initial={{ opacity: 0, x: 24 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.35, duration: 0.7, ease: EASE }}
-              className="w-full max-w-[480px]"
-            >
-              <CarbonMolecule />
-            </motion.div>
-
+            {/* CTAs */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
-              className="flex w-full max-w-[420px] flex-col items-center gap-4"
+              transition={{ delay: 0.75, duration: 0.5, ease: EASE }}
+              className="flex flex-col gap-4 pt-1"
             >
-              <div className="flex flex-wrap items-center justify-center gap-3">
+              <div className="flex flex-wrap items-center gap-3">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 bg-[var(--color-primary)] text-white font-semibold px-6 py-3 rounded-full hover:bg-[var(--color-primary-deep)] transition-colors duration-200 text-[14px]"
+                  className="inline-flex items-center gap-2 bg-[var(--color-primary)] text-white font-semibold px-6 py-3 rounded-full shadow-[0_8px_20px_-6px_color-mix(in_srgb,var(--color-primary)_55%,transparent)] hover:bg-[var(--color-primary-deep)] hover:-translate-y-0.5 transition-all duration-200 text-[14px]"
                   style={{ fontFamily: 'var(--font-body)' }}
                 >
                   {t('common.bookDemo')}
@@ -154,26 +142,42 @@ export default function Hero() {
                 </Link>
                 <Link
                   to="/services"
-                  className="inline-flex items-center gap-2 border border-[var(--color-primary)] text-[var(--color-primary)] font-semibold px-6 py-3 rounded-full hover:bg-[var(--color-bg-secondary)] transition-colors duration-200 text-[14px]"
+                  className="inline-flex items-center gap-2 border border-[var(--color-border)] text-[var(--color-text-primary)] font-semibold px-6 py-3 rounded-full hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-colors duration-200 text-[14px]"
                   style={{ fontFamily: 'var(--font-body)' }}
                 >
                   {t('common.explorePlatform')}
                 </Link>
               </div>
 
-              <div className="flex items-center justify-center gap-2 flex-wrap">
-                {trustBadges.map(b => (
+              <div className="flex items-center gap-x-5 gap-y-1.5 flex-wrap">
+                {[t('hero.trilingualReports'), t('hero.noHardware')].map(f => (
                   <span
-                    key={b}
-                    className="text-[10.5px] font-medium text-[var(--color-text-secondary)] border border-[var(--color-border)] px-2.5 py-1 rounded-full bg-[var(--color-surface)]"
+                    key={f}
+                    className="inline-flex items-center gap-1.5 text-[12.5px] font-medium text-[var(--color-text-secondary)]"
                     style={{ fontFamily: 'var(--font-body)' }}
                   >
-                    {b}
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 text-[var(--color-primary)]">
+                      <circle cx="7" cy="7" r="7" fill="currentColor" opacity="0.14" />
+                      <path d="M4 7l2 2 4-4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    {f}
                   </span>
                 ))}
               </div>
             </motion.div>
           </div>
+
+          {/* Right — Hex Network */}
+          <motion.div
+            initial={{ opacity: 0, x: 24 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.35, duration: 0.7, ease: EASE }}
+            className="flex items-center justify-center"
+          >
+            <div className="w-full max-w-[440px] lg:max-w-[500px]">
+              <CarbonMolecule />
+            </div>
+          </motion.div>
         </div>
       </div>
 
