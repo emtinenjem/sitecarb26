@@ -1,0 +1,54 @@
+:root {
+  /* Surfaces */
+  --color-bg: #F6F9F8;
+  --color-bg-secondary: #EBF2EE;
+  --color-surface: #FFFFFF;
+  --color-contrast-band: #0C3F38;
+  --color-contrast-band-soft: #123F38;
+
+  /* Brand — sampled from the Photocarb Tunisia mark (navy-to-emerald globe) */
+  --color-primary: #0FAE85;
+  --color-primary-deep: #0A7C60;
+  --color-navy: #0B1F52;
+  --color-navy-deep: #071438;
+  --color-lime: #86BF3E;
+  --color-violet: #7C5CE0;
+  --color-info: #3E7CB8;
+
+  /* Qatar accent — used sparingly (flag icons, small dividers) */
+  --color-qatar: #8A1538;
+  --color-qatar-tint: #F8ECEF;
+
+  /* Tunisia accent — flag-red, used only for flag icons and tiny touches, not as the site's primary brand color */
+  --color-tunisia: #E70013;
+  --color-tunisia-tint: #FDECEC;
+
+  /* Text */
+  --color-text-primary: #161F1B;
+  --color-text-secondary: #57685F;
+  --color-text-inverse: #F3F7F5;
+  --color-text-inverse-soft: #A9C9C0;
+
+  /* Border / tints (replace one-off hardcoded hexes across components) */
+  --color-border: #DCE6E0;
+  --color-tint-teal: #E4F2EE;
+  --color-tint-lime: #F0F6E6;
+  --color-tint-violet: #F2EFFC;
+  --color-tint-navy: #E9EBF5;
+
+  /* Status */
+  --color-danger: #DC2626;
+  --color-danger-bg: #FDF0F0;
+  --color-warning: #C67A0A;
+  --color-warning-bg: #FCF3E3;
+  --color-success-bg: #EDF7EA;
+
+  /* Neutrals (for the without/with widget) */
+  --color-neutral-300: #DCE1DE;
+  --color-neutral-400: #93A39B;
+  --color-neutral-50: #F7F9F8;
+
+  /* Shadows */
+  --shadow-card: 0 1px 2px color-mix(in srgb, var(--color-text-primary) 4%, transparent), 0 12px 32px color-mix(in srgb, var(--color-text-primary) 6%, transparent);
+  --shadow-card-hover: 0 20px 48px color-mix(in srgb, var(--color-primary) 16%, transparent);
+}

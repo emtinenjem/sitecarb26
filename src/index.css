@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  --spacing-section: 7rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Arabic / RTL ---- */
+/* Remap the design-token font vars so every component that uses
+   var(--font-body)/var(--font-display) inline picks up Arabic faces. */
+:root[lang='ar'] {
+  --font-body: 'Cairo', system-ui, sans-serif;
+  --font-display: 'Amiri', 'Cairo', Georgia, serif;
+}
+html[lang='ar'] body {
+  font-family: 'Cairo', system-ui, sans-serif;
+}
+/* Arabic reads better with slightly looser line-height on large headings */
+html[lang='ar'] h1,
+html[lang='ar'] h2 {
+  line-height: 1.35;
+}
+/* Flip the directional "arrow" glyphs used in CTAs so they point the
+   correct way in RTL (they are inline SVGs pointing right by default). */
+html[dir='rtl'] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+::-webkit-scrollbar { width: 0; background: transparent; }
+
+/* Orbit animation for hex network */
+@keyframes orbit {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes counter-orbit {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+@keyframes pulse-ring {
+  0%   { transform: scale(1);   opacity: 0.6; }
+  100% { transform: scale(1.9); opacity: 0;   }
+}
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0);     }
+}
+@keyframes draw-line {
+  from { stroke-dashoffset: 1; }
+  to   { stroke-dashoffset: 0; }
+}
+@keyframes digit-roll {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-primary) 0%, transparent); }
+  50%       { box-shadow: 0 0 24px 6px color-mix(in srgb, var(--color-primary) 18%, transparent); }
+}
+@keyframes dash-flow {
+  from { stroke-dashoffset: 100; }
+  to   { stroke-dashoffset: 0; }
+}
+.animate-dash-flow { animation: dash-flow 4s linear infinite; }
+.animate-pulse-ring { animation: pulse-ring 2.4s cubic-bezier(0.2, 0.6, 0.4, 1) infinite; transform-origin: center; transform-box: fill-box; }
+
+.orbit-group { animation: orbit 28s linear infinite; }
+.counter-orbit { animation: counter-orbit 28s linear infinite; }
+.marquee-track { animation: marquee-scroll 32s linear infinite; }
+.marquee-track:hover { animation-play-state: paused; }
+
+.fade-up { opacity: 0; transform: translateY(32px); transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1); }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+
+.nav-link-underline { position: relative; display: inline-block; }
+.nav-link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 200ms ease;
+}
+.nav-link-underline:hover::after,
+.nav-link-underline.is-active::after {
+  transform: scaleX(1);
+}
+
+.hexagon-clip { clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
+
+.card-hover { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px color-mix(in srgb, var(--color-primary) 13%, transparent); }
+
+.gradient-numeral {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-lime) 50%, var(--color-violet) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.process-line {
+  position: relative;
+}
+.process-line::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 0; right: 0;
+  height: 1px;
+  background: var(--color-border);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 12%, transparent);
+}
+
+/* Nav dropdown */
+@keyframes dropdown-in {
+  from { opacity: 0; transform: translateY(-6px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.dropdown-panel { animation: dropdown-in 0.18s cubic-bezier(0.22,1,0.36,1) both; }
+
+.icon-tile {
+  transition: transform 0.25s cubic-bezier(0.22,1,0.36,1), background-color 0.25s ease, color 0.25s ease;
+}
+.group:hover .icon-tile, .icon-tile:hover { transform: translateY(-2px) scale(1.05); }
+
+/* Qatar accent divider — thin gradient rule used sparingly as a brand mark */
+.qatar-rule {
+  height: 2px;
+  width: 40px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--color-qatar) 0%, var(--color-primary) 100%);
+}
+
+/* Tunisia accent divider — thin gradient rule used sparingly as a brand mark */
+.tunisia-rule {
+  height: 2px;
+  width: 40px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--color-tunisia) 0%, var(--color-primary) 100%);
+}
+
+.link-arrow { display: inline-flex; align-items: center; gap: 6px; }
+.link-arrow svg { transition: transform 0.2s ease; }
+.link-arrow:hover svg { transform: translateX(3px); }
+
+button, a { cursor: pointer; }
