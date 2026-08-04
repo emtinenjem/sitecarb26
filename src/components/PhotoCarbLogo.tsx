@@ -1,3 +1,5 @@
+import { useLang } from '../i18n/LanguageContext'
+
 const WORDMARK_GRADIENT =
   'linear-gradient(90deg, var(--color-navy) 0%, var(--color-primary) 100%)'
 
@@ -10,6 +12,8 @@ interface Props {
 
 /** Real Photocarb mark (public/images/logo.png) + gradient wordmark sampled from the logo's own colors. */
 export default function PhotoCarbLogo({ markSize = 40, showWordmark = true, wordmarkClassName = '', className = '' }: Props) {
+  const { lang } = useLang()
+  const wordmark = lang === 'ar' ? 'فوتوكارب' : 'Photocarb'
   return (
     <span className={`inline-flex items-center gap-3 ${className}`}>
       <img
@@ -25,7 +29,7 @@ export default function PhotoCarbLogo({ markSize = 40, showWordmark = true, word
           className={`font-bold text-[21px] tracking-tight bg-clip-text text-transparent leading-none ${wordmarkClassName}`}
           style={{ backgroundImage: WORDMARK_GRADIENT, fontFamily: 'var(--font-display)' }}
         >
-          Photocarb
+          {wordmark}
         </span>
       )}
     </span>
