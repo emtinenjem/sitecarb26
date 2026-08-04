@@ -97,6 +97,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     'hero.poweringYour': 'Powering your',
     'hero.description':
       "Photocarb helps companies measure their carbon footprint, automate ESG reporting, comply with CBAM regulations, manage MRV workflows, perform Life Cycle Assessments, and track supply chain emissions—all from one intelligent platform.",
+    'hero.trilingualReports': 'Trilingual Reports',
+    'hero.noHardware': 'No Hardware Required',
 
     // Footer
     'footer.tagline': 'AI-powered carbon intelligence software for Tunisian industry. Headquartered in Sousse, Tunisia — with a Gulf office in Doha, Qatar.',
@@ -643,6 +645,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     'hero.poweringYour': 'Alimente votre',
     'hero.description':
       "Photocarb aide les entreprises à mesurer leur empreinte carbone, automatiser le reporting ESG, se conformer à la réglementation MACF, gérer les processus MRV, réaliser des analyses de cycle de vie et suivre les émissions de leur chaîne d'approvisionnement — le tout depuis une seule plateforme intelligente.",
+    'hero.trilingualReports': 'Rapports trilingues',
+    'hero.noHardware': 'Aucun matériel requis',
 
     // Footer
     'footer.tagline': "Logiciel de veille carbone alimenté par l'IA pour l'industrie tunisienne. Siège social à Sousse, Tunisie — avec un bureau du Golfe à Doha, Qatar.",
@@ -1189,6 +1193,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     'hero.poweringYour': 'نُشغّل',
     'hero.description':
       'تساعد فوتوكارب الشركات على قياس بصمتها الكربونية، وأتمتة تقارير ESG، والامتثال للوائح CBAM، وإدارة سير عمل القياس والإبلاغ والتحقق (MRV)، وإجراء تقييمات دورة الحياة، وتتبّع انبعاثات سلسلة التوريد — كل ذلك من منصة ذكية واحدة.',
+    'hero.trilingualReports': 'تقارير ثلاثية اللغة',
+    'hero.noHardware': 'دون الحاجة إلى أجهزة',
 
     // Footer
     'footer.tagline': 'برمجيات ذكاء كربوني مدعومة بالذكاء الاصطناعي للصناعة التونسية. المقر الرئيسي في سوسة، تونس — مع مكتب خليجي في الدوحة، قطر.',
