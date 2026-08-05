@@ -65,10 +65,10 @@ function BenefitBlock({ benefit: b, flip }: { benefit: typeof BENEFITS[0]; flip:
     >
       <div className={`grid lg:grid-cols-2 gap-12 lg:gap-20 items-center ${flip ? 'direction-rtl' : ''}`}>
         {/* Content */}
-        <div className={`relative ${flip ? 'lg:order-2' : ''} fade-up ${visible ? 'visible' : ''}`}>
+        <div className={`relative overflow-hidden ${flip ? 'lg:order-2' : ''} fade-up ${visible ? 'visible' : ''}`}>
           {/* Oversized background numeral */}
           <div
-            className="absolute -top-8 -start-4 text-[180px] font-bold leading-none pointer-events-none select-none gradient-numeral opacity-[0.08]"
+            className="absolute -top-4 -start-4 text-[100px] sm:text-[140px] lg:text-[180px] font-bold leading-none pointer-events-none select-none gradient-numeral opacity-[0.08]"
             style={{ fontFamily: 'var(--font-display)', zIndex: 0 }}
           >
             {b.num}

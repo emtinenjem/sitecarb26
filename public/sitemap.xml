@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://photocarb.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/fr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/ar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/fr/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/ar/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/services/bilan-carbone</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/bilan-carbone" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/bilan-carbone" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/bilan-carbone" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/bilan-carbone" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/fr/services/bilan-carbone</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/bilan-carbone" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/bilan-carbone" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/bilan-carbone" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/bilan-carbone" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/ar/services/bilan-carbone</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/bilan-carbone" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/bilan-carbone" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/bilan-carbone" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/bilan-carbone" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/services/esg-reports</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/esg-reports" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/esg-reports" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/esg-reports" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/esg-reports" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/fr/services/esg-reports</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/esg-reports" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/esg-reports" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/esg-reports" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/esg-reports" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/ar/services/esg-reports</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/esg-reports" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/esg-reports" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/esg-reports" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/esg-reports" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/services/cbam</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/cbam" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/cbam" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/cbam" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/cbam" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/fr/services/cbam</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/cbam" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/cbam" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/cbam" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/cbam" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/ar/services/cbam</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/cbam" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/cbam" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/cbam" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/cbam" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/services/supply-chain</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/supply-chain" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/supply-chain" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/supply-chain" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/supply-chain" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/fr/services/supply-chain</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/supply-chain" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/supply-chain" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/supply-chain" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/supply-chain" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/ar/services/supply-chain</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/supply-chain" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/supply-chain" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/supply-chain" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/supply-chain" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/services/simulation-lab</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/simulation-lab" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/simulation-lab" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/simulation-lab" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/simulation-lab" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/fr/services/simulation-lab</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/simulation-lab" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/simulation-lab" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/simulation-lab" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/simulation-lab" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/ar/services/simulation-lab</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/simulation-lab" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/simulation-lab" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/simulation-lab" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/simulation-lab" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/services/lca</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/lca" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/lca" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/lca" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/lca" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/fr/services/lca</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/lca" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/lca" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/lca" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/lca" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/ar/services/lca</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/lca" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/lca" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/lca" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/lca" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/services/ai-reports</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/ai-reports" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/ai-reports" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/ai-reports" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/ai-reports" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/fr/services/ai-reports</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/ai-reports" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/ai-reports" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/ai-reports" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/ai-reports" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/ar/services/ai-reports</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/ai-reports" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/ai-reports" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/ai-reports" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/ai-reports" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/services/anme-compliance</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/anme-compliance" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/anme-compliance" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/anme-compliance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/anme-compliance" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/fr/services/anme-compliance</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/anme-compliance" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/anme-compliance" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/anme-compliance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/anme-compliance" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/ar/services/anme-compliance</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/services/anme-compliance" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/services/anme-compliance" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/services/anme-compliance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/services/anme-compliance" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/about" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/about" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/about" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/fr/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/about" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/about" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/about" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/ar/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/about" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/about" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/about" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/compliance</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/compliance" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/compliance" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/compliance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/compliance" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/fr/compliance</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/compliance" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/compliance" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/compliance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/compliance" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/ar/compliance</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/compliance" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/compliance" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/compliance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/compliance" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/contact" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/contact" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/contact" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/fr/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/contact" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/contact" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/contact" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/ar/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/contact" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/contact" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/contact" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/legal/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/legal/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/legal/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/legal/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/legal/privacy-policy" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/fr/legal/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/legal/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/legal/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/legal/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/legal/privacy-policy" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/ar/legal/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/legal/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/legal/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/legal/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/legal/privacy-policy" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/legal/terms-of-service</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/legal/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/legal/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/legal/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/legal/terms-of-service" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/fr/legal/terms-of-service</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/legal/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/legal/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/legal/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/legal/terms-of-service" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/ar/legal/terms-of-service</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/legal/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/legal/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/legal/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/legal/terms-of-service" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/legal/data-processing-agreement</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/legal/data-processing-agreement" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/legal/data-processing-agreement" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/legal/data-processing-agreement" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/legal/data-processing-agreement" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/fr/legal/data-processing-agreement</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/legal/data-processing-agreement" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/legal/data-processing-agreement" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/legal/data-processing-agreement" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/legal/data-processing-agreement" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/ar/legal/data-processing-agreement</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/legal/data-processing-agreement" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/legal/data-processing-agreement" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/legal/data-processing-agreement" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/legal/data-processing-agreement" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/legal/cookie-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/legal/cookie-policy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/legal/cookie-policy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/legal/cookie-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/legal/cookie-policy" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/fr/legal/cookie-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/legal/cookie-policy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/legal/cookie-policy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/legal/cookie-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/legal/cookie-policy" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://photocarb.com/ar/legal/cookie-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://photocarb.com/legal/cookie-policy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://photocarb.com/fr/legal/cookie-policy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://photocarb.com/ar/legal/cookie-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://photocarb.com/legal/cookie-policy" />
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

@@ -264,7 +264,7 @@ export default function Nav() {
             type="button"
             aria-label={mobileOpen ? t('nav.closeMenu') : t('nav.openMenu')}
             onClick={() => setMobileOpen(v => !v)}
-            className="text-[var(--color-text-primary)]"
+            className="text-[var(--color-text-primary)] p-2.5 -me-2.5"
           >
           <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.8">
             {mobileOpen ? (

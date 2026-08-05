@@ -96,7 +96,7 @@ export default function SectorTabs() {
                 {t('sector.keyMetric')}
               </span>
               <div
-                className="text-[72px] font-bold leading-none mb-3"
+                className="text-[44px] sm:text-[56px] lg:text-[72px] font-bold leading-none mb-3 break-words"
                 style={{ color: s.color, fontFamily: 'var(--font-display)' }}
               >
                 {s.metric}

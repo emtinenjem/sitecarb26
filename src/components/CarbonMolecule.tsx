@@ -16,7 +16,7 @@ const MODULES = [
   { id: 'cbam-compliance', label: 'CBAM Compliance', tagline: 'CBAM & EU Compliance', color: 'var(--color-violet)', services: ['cbam'] },
   { id: 'simulation-ai', label: 'Simulation & AI', tagline: 'Simulation Lab & AI Scenarios', color: 'var(--color-info)', services: ['simulation-lab'] },
   { id: 'carbon-monitoring', label: 'Carbon Footprint', tagline: 'Facility Tracking & Compliance', color: 'var(--color-navy)', services: ['anme-compliance'] },
-  { id: 'supply-chain', label: 'Supply Chain', tagline: 'Supply Chain & Product Footprint', color: 'var(--color-lime)', services: ['supply-chain'] },
+  { id: 'supply-chain', label: 'Supply Chain', tagline: 'Supply Chain & Product Footprint', color: 'var(--color-primary-deep)', services: ['supply-chain'] },
 ] as const
 
 const COUNT = MODULES.length
@@ -45,7 +45,7 @@ export default function CarbonMolecule({ className = '' }: CarbonMoleculeProps) 
   const reduceMotion = useReducedMotion()
   const { t, lang } = useLang()
 
-  const innerNodes = ringPositions(INNER_R, COUNT)
+  const innerNodes = ringPositions(INNER_R, COUNT, -60)
   const outerNodes = ringPositions(OUTER_R, COUNT, -60)
   const labelNodes = ringPositions(LABEL_R, COUNT, -60)
 
@@ -85,18 +85,18 @@ export default function CarbonMolecule({ className = '' }: CarbonMoleculeProps) 
               <stop offset="100%" stopColor="var(--color-primary)" stopOpacity="0" />
             </radialGradient>
             <filter id="cm-node-shadow" x="-60%" y="-60%" width="220%" height="220%">
-              <feDropShadow dx="0" dy="1" stdDeviation="1.4" floodOpacity="0.28" />
+              <feDropShadow dx="0" dy="1" stdDeviation="1.6" floodOpacity="0.2" />
             </filter>
             <filter id="cm-hex-shadow" x="-60%" y="-60%" width="220%" height="220%">
-              <feDropShadow dx="0" dy="3" stdDeviation="5" floodOpacity="0.16" />
+              <feDropShadow dx="0" dy="4" stdDeviation="7" floodOpacity="0.14" />
             </filter>
           </defs>
 
           {/* Slow-rotating decorative rings — reinforce the "live network" feel at rest */}
           {!reduceMotion && (
             <>
-              <circle cx="150" cy="150" r="160" fill="none" stroke="url(#cm-ring)" strokeWidth="1" strokeDasharray="1 11" opacity="0.5" className="orbit-group" style={{ transformOrigin: '150px 150px' }} />
-              <circle cx="150" cy="150" r="96" fill="none" stroke="var(--color-border)" strokeWidth="1" strokeDasharray="1 7" opacity="0.6" className="counter-orbit" style={{ transformOrigin: '150px 150px' }} />
+              <circle cx="150" cy="150" r="160" fill="none" stroke="url(#cm-ring)" strokeWidth="1" strokeDasharray="1 11" opacity="0.32" className="orbit-group" style={{ transformOrigin: '150px 150px' }} />
+              <circle cx="150" cy="150" r="96" fill="none" stroke="var(--color-border)" strokeWidth="1" strokeDasharray="1 7" opacity="0.45" className="counter-orbit" style={{ transformOrigin: '150px 150px' }} />
             </>
           )}
 
@@ -109,9 +109,9 @@ export default function CarbonMolecule({ className = '' }: CarbonMoleculeProps) 
               <line
                 key={`inner-bond-${i}`}
                 x1={from.x} y1={from.y} x2={next.x} y2={next.y}
-                stroke="url(#cm-ring)" strokeWidth="2" strokeDasharray="8 8" opacity="0.95"
+                stroke="url(#cm-ring)" strokeWidth="1.75" strokeDasharray="8 8" opacity="0.85"
                 className={reduceMotion ? '' : 'animate-dash-flow'}
-                style={{ animationDelay: `${i * 0.2}s` }}
+                style={{ animationDelay: `${i * 0.2}s`, animationDuration: '7s' }}
               />
             )
           })}
@@ -124,10 +124,10 @@ export default function CarbonMolecule({ className = '' }: CarbonMoleculeProps) 
               <line
                 key={`outer-bond-${i}`}
                 x1={inner.x} y1={inner.y} x2={outer.x} y2={outer.y}
-                stroke={nodeColor} strokeWidth="2" strokeDasharray="6 6"
-                opacity={isDimmed ? 0.2 : 0.7}
+                stroke={nodeColor} strokeWidth="1.75" strokeDasharray="6 6"
+                opacity={isDimmed ? 0.18 : 0.65}
                 className={reduceMotion ? '' : 'animate-dash-flow'}
-                style={{ animationDelay: `${i * 0.3}s`, transition: 'opacity 0.2s' }}
+                style={{ animationDelay: `${i * 0.3}s`, animationDuration: '7s', transition: 'opacity 0.2s' }}
               />
             )
           })}
@@ -139,8 +139,8 @@ export default function CarbonMolecule({ className = '' }: CarbonMoleculeProps) 
               fill={`color-mix(in srgb, ${MODULES[i].color} 18%, transparent)`}
               stroke={MODULES[i].color} strokeWidth="1.75"
               filter="url(#cm-node-shadow)"
-              animate={reduceMotion ? {} : { scale: [0.92, 1.08, 0.92] }}
-              transition={reduceMotion ? {} : { duration: 2.8, repeat: Infinity, delay: i * 0.28, ease: 'easeInOut' }}
+              animate={reduceMotion ? {} : { scale: [0.97, 1.04, 0.97] }}
+              transition={reduceMotion ? {} : { duration: 3.4, repeat: Infinity, delay: i * 0.28, ease: 'easeInOut' }}
             />
           ))}
 
@@ -176,7 +176,7 @@ export default function CarbonMolecule({ className = '' }: CarbonMoleculeProps) 
                   strokeWidth={isActive ? 2.75 : 2.25}
                   filter="url(#cm-node-shadow)"
                   animate={{
-                    scale: isActive ? 1.25 : reduceMotion ? 1 : [0.9, 1.12, 0.9],
+                    scale: isActive ? 1.25 : reduceMotion ? 1 : [0.96, 1.05, 0.96],
                     opacity: isDimmed ? 0.35 : 1,
                   }}
                   transition={
@@ -184,7 +184,7 @@ export default function CarbonMolecule({ className = '' }: CarbonMoleculeProps) 
                       ? { duration: 0.2 }
                       : reduceMotion
                         ? {}
-                        : { duration: 2.8, repeat: Infinity, delay: i * 0.28 + 0.4, ease: 'easeInOut' }
+                        : { duration: 3.4, repeat: Infinity, delay: i * 0.28 + 0.4, ease: 'easeInOut' }
                   }
                   style={{ transformOrigin: '0px 0px' }}
                 />
@@ -217,7 +217,7 @@ export default function CarbonMolecule({ className = '' }: CarbonMoleculeProps) 
               onClick={() => handleClick(mod.id)}
               aria-label={`${label} — ${tagline}`}
               title={label}
-              className="absolute flex -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-1 whitespace-nowrap rounded-full border px-2.5 py-1.5 text-[9.5px] font-bold uppercase tracking-wide backdrop-blur-sm transition-all duration-200 md:gap-1.5 md:px-3 md:py-1.5 md:text-[10.5px]"
+              className="absolute flex -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-1 whitespace-nowrap rounded-full border px-2.5 py-1.5 text-[10.5px] font-bold uppercase tracking-wide backdrop-blur-sm transition-all duration-200 hover:shadow-md md:gap-1.5 md:px-3 md:py-1.5 md:text-[11.5px]"
               style={{
                 left: `${(node.x / 300) * 100}%`,
                 top: `${(node.y / 300) * 100}%`,

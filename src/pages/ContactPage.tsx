@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useInView } from '../hooks/useInView'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { useBreadcrumbJsonLd } from '../hooks/useBreadcrumbJsonLd'
 import { IconCheck, IconPin, IconPhone, IconMail, IconClock } from '../components/icons'
 import { QatarFlag, TunisiaFlag } from '../components/Flags'
 import { SERVICES, localizeService } from '../data/services'
@@ -69,6 +70,10 @@ const GENERAL_CONTACTS = [
 export default function ContactPage() {
   const { t } = useLang()
   useDocumentMeta(t('meta.contact.title'), t('meta.contact.desc'))
+  useBreadcrumbJsonLd([
+    { name: t('legalPage.home'), path: '/' },
+    { name: t('nav.contact'), path: '/contact' },
+  ])
 
   return (
     <>

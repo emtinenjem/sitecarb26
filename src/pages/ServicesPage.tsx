@@ -4,12 +4,21 @@ import IntegrationArch from '../components/IntegrationArch'
 import MetricsStrip from '../components/MetricsStrip'
 import FinalCTA from '../components/FinalCTA'
 import { useInView } from '../hooks/useInView'
+import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { useBreadcrumbJsonLd } from '../hooks/useBreadcrumbJsonLd'
 import { SERVICES, localizeService, type ServiceDef } from '../data/services'
 import { useLang } from '../i18n/LanguageContext'
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function ServicesPage() {
+  const { t } = useLang()
+  useDocumentMeta(t('meta.services.title'), t('meta.services.desc'))
+  useBreadcrumbJsonLd([
+    { name: t('legalPage.home'), path: '/' },
+    { name: t('nav.services'), path: '/services' },
+  ])
+
   return (
     <>
       <ServicesHero />

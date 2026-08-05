@@ -43,7 +43,10 @@ export function detectLang(pathname: string): Lang {
   return 'en'
 }
 
-function buildPath(barePath: string, lang: Lang): string {
+/** Builds the URL for a bare (English-shaped) path under the given language. Exported
+ *  so non-context consumers (e.g. the SEO hreflang hook) can compute all three
+ *  language variants of the current page without duplicating the prefix logic. */
+export function pathForLang(barePath: string, lang: Lang): string {
   const prefix = LANG_PREFIX[lang]
   if (barePath === '/') return prefix || '/'
   return `${prefix}${barePath}`
@@ -62,13 +65,13 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const localizePath = (path: string): string => {
     if (!path.startsWith('/')) return path
-    return buildPath(getBarePath(path), lang)
+    return pathForLang(getBarePath(path), lang)
   }
 
   const setLang = (l: Lang) => {
     if (l === lang) return
     const bare = getBarePath(location.pathname)
-    navigate(`${buildPath(bare, l)}${location.search}${location.hash}`)
+    navigate(`${pathForLang(bare, l)}${location.search}${location.hash}`)
   }
 
   const toggle = () => setLang(LANG_ORDER[(LANG_ORDER.indexOf(lang) + 1) % LANG_ORDER.length])

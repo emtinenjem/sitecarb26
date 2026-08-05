@@ -11,6 +11,7 @@ import CompliancePage from './pages/CompliancePage'
 import ContactPage from './pages/ContactPage'
 import LegalPage from './pages/LegalPage'
 import { LanguageProvider, LANG_PREFIX } from './i18n/LanguageContext'
+import { useSeoLinks } from './hooks/useSeoLinks'
 
 function PageTransition({ children }: { children: React.ReactNode }) {
   return (
@@ -41,6 +42,7 @@ const PAGE_ROUTES: { path: string; element: ReactNode }[] = [
 
 function AnimatedRoutes() {
   const location = useLocation()
+  useSeoLinks()
   return (
     <AnimatePresence mode="wait" initial={false}>
       <Routes location={location} key={location.pathname}>

@@ -9,6 +9,7 @@ import { IconFactory, IconGlobe, IconChart } from '../components/icons'
 import { TunisiaFlag } from '../components/Flags'
 import { useLang } from '../i18n/LanguageContext'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { useBreadcrumbJsonLd } from '../hooks/useBreadcrumbJsonLd'
 
 const CEO_MESSAGE = {
   initials: 'IJ',
@@ -76,6 +77,10 @@ const VISION_PILLARS = [
 export default function AboutPage() {
   const { t } = useLang()
   useDocumentMeta(t('meta.about.title'), t('meta.about.desc'))
+  useBreadcrumbJsonLd([
+    { name: t('legalPage.home'), path: '/' },
+    { name: t('nav.about'), path: '/about' },
+  ])
 
   return (
     <>
@@ -285,8 +290,8 @@ function ValueBlock({ value: v, flip, visible, delay }: { value: typeof VALUES[0
   return (
     <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-16">
       <div className={`grid lg:grid-cols-2 gap-12 items-center ${flip ? '' : ''}`}>
-        <div className={`relative ${flip ? 'lg:order-2' : ''} fade-up ${visible ? 'visible' : ''}`} style={{ transitionDelay: `${delay}s` }}>
-          <div className="absolute -top-6 -left-4 text-[160px] font-bold leading-none pointer-events-none select-none gradient-numeral opacity-[0.07]" style={{ fontFamily: 'var(--font-display)' }}>
+        <div className={`relative overflow-hidden ${flip ? 'lg:order-2' : ''} fade-up ${visible ? 'visible' : ''}`} style={{ transitionDelay: `${delay}s` }}>
+          <div className="absolute -top-4 -start-4 text-[90px] sm:text-[130px] lg:text-[160px] font-bold leading-none pointer-events-none select-none gradient-numeral opacity-[0.07]" style={{ fontFamily: 'var(--font-display)' }}>
             {v.num}
           </div>
           <div className="relative">

@@ -13,19 +13,47 @@ import FinalCTA from '../components/FinalCTA'
 import CertMarquee from '../components/CertMarquee'
 import { IconCheckCircle, IconClock, IconBuilding } from '../components/icons'
 import { useLang } from '../i18n/LanguageContext'
+import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { useBreadcrumbJsonLd } from '../hooks/useBreadcrumbJsonLd'
+import { useJsonLd } from '../hooks/useJsonLd'
 
 export default function ServiceDetailPage() {
   const { slug } = useParams<{ slug: string }>()
   const { t, lang, localizePath } = useLang()
   const base = slug ? getServiceById(slug) : undefined
+  const s = base ? localizeService(base, lang) : null
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [slug])
 
-  if (!base) return <Navigate to={localizePath('/services')} replace />
+  useDocumentMeta(s ? `${s.title} | Photocarb` : 'Photocarb', s?.valueProp)
+  useBreadcrumbJsonLd(
+    s
+      ? [
+          { name: t('legalPage.home'), path: '/' },
+          { name: t('nav.services'), path: '/services' },
+          { name: s.title, path: `/services/${s.id}` },
+        ]
+      : [],
+  )
+  useJsonLd(
+    'service-jsonld',
+    s
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: s.title,
+          description: s.description,
+          provider: { '@id': 'https://photocarb.com/#organization' },
+          areaServed: ['TN', 'QA'],
+          serviceType: s.subtitle,
+        }
+      : null,
+  )
 
-  const s = localizeService(base, lang)
+  if (!s) return <Navigate to={localizePath('/services')} replace />
+
   const Icon = s.icon
   const related = SERVICES.filter(x => x.id !== s.id).slice(0, 3).map(x => localizeService(x, lang))
   const deliverySteps = lang === 'ar' ? SERVICE_DELIVERY_STEPS_AR : lang === 'fr' ? SERVICE_DELIVERY_STEPS_FR : SERVICE_DELIVERY_STEPS

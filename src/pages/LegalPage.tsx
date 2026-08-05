@@ -3,6 +3,7 @@ import { Navigate, useParams } from 'react-router-dom'
 import { Link } from '../components/LocalizedLink'
 import { LEGAL_DOCS, getLegalDoc, localizeLegalDoc } from '../data/legal'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { useBreadcrumbJsonLd } from '../hooks/useBreadcrumbJsonLd'
 import FinalCTA from '../components/FinalCTA'
 import { useLang } from '../i18n/LanguageContext'
 
@@ -20,6 +21,15 @@ export default function LegalPage() {
   useDocumentMeta(
     doc ? `${doc.title} | Photocarb` : 'Legal | Photocarb',
     doc?.summary,
+  )
+  useBreadcrumbJsonLd(
+    doc
+      ? [
+          { name: t('legalPage.home'), path: '/' },
+          { name: t('legalPage.legal'), path: '/legal' },
+          { name: doc.title, path: `/legal/${doc.slug}` },
+        ]
+      : [],
   )
 
   if (!doc) return <Navigate to={localizePath('/')} replace />

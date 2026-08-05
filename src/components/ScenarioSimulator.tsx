@@ -56,16 +56,16 @@ export default function ScenarioSimulator({ color, icon: Icon, title, scenarios 
           ))}
         </select>
 
-        <div className="grid grid-cols-3 gap-3 mb-4">
-          <div className="bg-[var(--color-bg)] rounded-xl p-3.5 text-center">
+        <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-4">
+          <div className="bg-[var(--color-bg)] rounded-xl p-2 sm:p-3.5 text-center">
             <div className="text-[24px] font-bold leading-none tabular-nums" style={{ color, fontFamily: 'var(--font-display)' }}>{emissions.toFixed(0)}%</div>
             <div className="text-[10px] text-[var(--color-text-secondary)] mt-1.5 uppercase tracking-wide" style={{ fontFamily: 'var(--font-body)' }}>{t('scenarioSim.emissions')}</div>
           </div>
-          <div className="bg-[var(--color-bg)] rounded-xl p-3.5 text-center">
+          <div className="bg-[var(--color-bg)] rounded-xl p-2 sm:p-3.5 text-center">
             <div className="text-[24px] font-bold leading-none tabular-nums" style={{ color, fontFamily: 'var(--font-display)' }}>{cost.toFixed(0)}%</div>
             <div className="text-[10px] text-[var(--color-text-secondary)] mt-1.5 uppercase tracking-wide" style={{ fontFamily: 'var(--font-body)' }}>{t('scenarioSim.costImpact')}</div>
           </div>
-          <div className="bg-[var(--color-bg)] rounded-xl p-3.5 text-center">
+          <div className="bg-[var(--color-bg)] rounded-xl p-2 sm:p-3.5 text-center">
             <div className="text-[24px] font-bold leading-none tabular-nums" style={{ color, fontFamily: 'var(--font-display)' }}>{payback.toFixed(0)}<span className="text-[14px]">mo</span></div>
             <div className="text-[10px] text-[var(--color-text-secondary)] mt-1.5 uppercase tracking-wide" style={{ fontFamily: 'var(--font-body)' }}>{t('scenarioSim.payback')}</div>
           </div>

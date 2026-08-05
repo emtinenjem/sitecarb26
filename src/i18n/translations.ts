@@ -26,6 +26,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     'meta.compliance.desc': "CBAM, IFRS S2, and Tunisia's ANME energy-audit law all demand the same verified data. See key deadlines and how Photocarb files one dataset everywhere.",
     'meta.contact.title': 'Contact Photocarb | Book a Demo | Carbon Intelligence Software for Tunisia',
     'meta.contact.desc': "Book a free 45-minute discovery session with Photocarb's Sousse-based team. Get a preliminary CBAM exposure assessment and live platform walkthrough for your sector.",
+    'meta.services.title': 'Carbon Compliance Software Suite | Bilan Carbone, CBAM, ESG, LCA | Photocarb',
+    'meta.services.desc': 'Eight modules covering bilan carbone, CBAM, ESG reporting, Life Cycle Assessment, supply chain carbon, ANME compliance and more — one platform, delivered in 48 hours.',
 
     // About page
     'about.ceoMessage': "CEO's Message",
@@ -574,6 +576,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     'meta.compliance.desc': "Le MACF, IFRS S2 et la loi d'audit énergétique de l'ANME en Tunisie exigent tous les mêmes données vérifiées. Découvrez les échéances clés et comment Photocarb dépose un seul jeu de données partout.",
     'meta.contact.title': 'Contactez Photocarb | Réservez une démo | Logiciel d\'intelligence carbone pour la Tunisie',
     'meta.contact.desc': "Réservez une session découverte gratuite de 45 minutes avec l'équipe de Photocarb basée à Sousse. Obtenez une évaluation préliminaire de votre exposition au MACF et une démonstration de la plateforme adaptée à votre secteur.",
+    'meta.services.title': 'Suite logicielle de conformité carbone | Bilan carbone, MACF, ESG, ACV | Photocarb',
+    'meta.services.desc': 'Huit modules couvrant le bilan carbone, le MACF, le reporting ESG, l\'Analyse de Cycle de Vie, le carbone de la chaîne d\'approvisionnement, la conformité ANME et plus — une seule plateforme, livrée en 48 heures.',
 
     // About page
     'about.ceoMessage': 'Message de la PDG',
@@ -1122,6 +1126,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     'meta.compliance.desc': 'تطلب CBAM وIFRS S2 وقانون تدقيق الطاقة لدى ANME في تونس جميعها البيانات الموثّقة نفسها. اطّلع على المواعيد النهائية الرئيسية وكيف تودع فوتوكارب مجموعة بيانات واحدة في كل مكان.',
     'meta.contact.title': 'اتصل بفوتوكارب | احجز عرضًا توضيحيًا | برمجيات الذكاء الكربوني لتونس',
     'meta.contact.desc': 'احجز جلسة استكشافية مجانية مدتها 45 دقيقة مع فريق فوتوكارب في سوسة. احصل على تقييم أولي لتعرّضكم لـ CBAM وجولة حية على المنصة مخصّصة لقطاعكم.',
+    'meta.services.title': 'مجموعة برمجيات الامتثال الكربوني | البصمة الكربونية، CBAM، ESG، تقييم دورة الحياة | فوتوكارب',
+    'meta.services.desc': 'ثماني وحدات تغطي البصمة الكربونية وCBAM وتقارير ESG وتقييم دورة الحياة وكربون سلسلة التوريد والامتثال لـ ANME وأكثر — منصة واحدة، تُسلَّم خلال 48 ساعة.',
 
     // About page
     'about.ceoMessage': 'كلمة الرئيس التنفيذي',

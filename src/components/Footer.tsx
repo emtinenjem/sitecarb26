@@ -259,7 +259,7 @@ export default function Footer() {
 
           {/* Company + Legal side by side, with the newsletter filling the space beneath them */}
           <div className="sm:col-span-2 lg:col-span-2">
-            <div className="grid grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
               <FooterCol col={COLS[1]} color="var(--color-violet)" />
               <FooterCol col={COLS[2]} color="var(--color-info)" />
             </div>

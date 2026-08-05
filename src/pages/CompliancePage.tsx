@@ -5,6 +5,7 @@ import FinalCTA from '../components/FinalCTA'
 import { useInView } from '../hooks/useInView'
 import { useLang } from '../i18n/LanguageContext'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { useBreadcrumbJsonLd } from '../hooks/useBreadcrumbJsonLd'
 import { IconCheck, IconCircleDot } from '../components/icons'
 
 const FRAMEWORKS = [
@@ -203,6 +204,10 @@ function localizeFramework(fw: typeof FRAMEWORKS[0], lang: 'en' | 'fr' | 'ar') {
 export default function CompliancePage() {
   const { lang, t } = useLang()
   useDocumentMeta(t('meta.compliance.title'), t('meta.compliance.desc'))
+  useBreadcrumbJsonLd([
+    { name: t('legalPage.home'), path: '/' },
+    { name: t('nav.compliance'), path: '/compliance' },
+  ])
   return (
     <>
       <ComplianceHero />
@@ -252,9 +257,9 @@ function FrameworkBlock({ fw, flip }: { fw: typeof FRAMEWORKS[0]; flip: boolean 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className={`grid lg:grid-cols-2 gap-14 items-start`}>
           {/* Left — content */}
-          <div className={`relative ${flip ? 'lg:order-2' : ''} fade-up ${visible ? 'visible' : ''}`}>
+          <div className={`relative overflow-hidden ${flip ? 'lg:order-2' : ''} fade-up ${visible ? 'visible' : ''}`}>
             <div
-              className="absolute -top-6 -left-4 text-[160px] font-bold leading-none pointer-events-none select-none gradient-numeral opacity-[0.07]"
+              className="absolute -top-4 -start-4 text-[90px] sm:text-[130px] lg:text-[160px] font-bold leading-none pointer-events-none select-none gradient-numeral opacity-[0.07]"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               {fw.num}
