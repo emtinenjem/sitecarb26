@@ -1,5 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import { renderEmailTemplate } from './_email-template.js'
+import { createCalendarEvent, getBusyIntervals, isCalendarConfigured } from './_google-calendar.js'
+import { intervalsOverlap, isValidDateStr, isValidSlot, slotRange } from './_slots.js'
 
 const TEAM_INBOX = process.env.CONTACT_INBOX || 'contact@photocarb.com'
 const FROM_ADDRESS = process.env.RESEND_FROM || 'Photocarb <notifications@photocarb.com>'
@@ -14,6 +16,10 @@ interface ContactPayload {
   interests?: string[]
   language?: string
   callTime?: string
+  // Raw date/slot (in addition to the human-readable callTime above) so the
+  // server can re-check and reserve the exact slot on Google Calendar.
+  callDate?: string
+  callTimeSlot?: string
   referral?: string
   context?: string
   email?: string
@@ -49,6 +55,39 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   const fullName = `${body.firstName} ${body.lastName}`.trim()
+
+  // Re-check and reserve the requested call slot on Google Calendar. This runs right before
+  // sending, so the gap between "still free" and "now booked" stays as small as possible —
+  // it's a check-then-create, not a true lock, but that's sufficient at this form's volume.
+  if (body.callDate && body.callTimeSlot && isValidDateStr(body.callDate) && isValidSlot(body.callTimeSlot)) {
+    if (isCalendarConfigured()) {
+      try {
+        const { start, end } = slotRange(body.callDate, body.callTimeSlot)
+        const busy = await getBusyIntervals(start.toISOString(), end.toISOString())
+        const alreadyTaken = busy.some(b => intervalsOverlap(start, end, new Date(b.start), new Date(b.end)))
+
+        if (alreadyTaken) {
+          return res.status(409).json({ error: 'That time slot was just booked by someone else. Please pick another.', conflict: true })
+        }
+
+        await createCalendarEvent({
+          summary: `Discovery Call — ${body.company}`,
+          description: [
+            `Contact: ${fullName}${body.email ? ` <${body.email}>` : ''}`,
+            `Phone: ${body.phone || '—'}`,
+            `Sector: ${body.sector || '—'}`,
+            `Interests: ${(body.interests || []).join(', ') || '—'}`,
+            `Notes: ${body.context || '—'}`,
+          ].join('\n'),
+          startISO: start.toISOString(),
+          endISO: end.toISOString(),
+        })
+      } catch (err) {
+        // Don't let a Calendar/network hiccup drop a real lead — log it and still send the emails below.
+        console.error('Calendar reservation failed:', err)
+      }
+    }
+  }
 
   const internalHtml = renderEmailTemplate({
     preheader: `New discovery call request from ${fullName} (${body.company})`,

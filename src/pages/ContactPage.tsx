@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useInView } from '../hooks/useInView'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
@@ -215,6 +215,8 @@ function BookingFormSection() {
   const [interests, setInterests] = useState<Set<string>>(new Set())
   const [callDate, setCallDate] = useState('')
   const [dateError, setDateError] = useState<string | null>(null)
+  const [callTimeSlot, setCallTimeSlot] = useState('')
+  const [takenSlots, setTakenSlots] = useState<Set<string>>(new Set())
   const expectTitles = EXPECT_RANGES.map((_, i) => t(`contact.expect${i + 1}.title`))
   const interestOptions = [...SERVICES.map(s => localizeService(s, lang).title), t('contact.fullPlatform'), t('contact.other')]
 
@@ -229,8 +231,26 @@ function BookingFormSection() {
   const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
     setCallDate(value)
+    setCallTimeSlot('')
     setDateError(isWeekday(value) ? null : t('contact.callDateWeekendError'))
   }
+
+  // Fetch which slots are already booked whenever a valid weekday is picked, so taken
+  // times show as disabled instead of letting two visitors pick the exact same session.
+  useEffect(() => {
+    if (!callDate || !isWeekday(callDate)) {
+      setTakenSlots(new Set())
+      return
+    }
+    let cancelled = false
+    fetch(`/api/availability?date=${callDate}`)
+      .then(res => res.json())
+      .then((data: { taken?: string[] }) => {
+        if (!cancelled) setTakenSlots(new Set(data.taken || []))
+      })
+      .catch(() => { if (!cancelled) setTakenSlots(new Set()) })
+    return () => { cancelled = true }
+  }, [callDate])
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -243,7 +263,6 @@ function BookingFormSection() {
 
     const form = e.currentTarget
     const data = new FormData(form)
-    const callTimeSlot = String(data.get('callTimeSlot') || '')
     const callTime = callDate && callTimeSlot ? `${callDate} ${callTimeSlot} (Tunisia time)` : ''
     const payload = {
       firstName: String(data.get('firstName') || ''),
@@ -257,6 +276,8 @@ function BookingFormSection() {
       interests: [...interests],
       language: String(data.get('language') || ''),
       callTime,
+      callDate: callDate || undefined,
+      callTimeSlot: callTimeSlot || undefined,
       referral: String(data.get('referral') || ''),
       context: String(data.get('context') || ''),
       website: String(data.get('website') || ''), // honeypot
@@ -271,7 +292,16 @@ function BookingFormSection() {
       })
       if (!res.ok) {
         const body = await res.json().catch(() => ({}))
-        throw new Error(body.error || t('contact.submitError'))
+        if (res.status === 409) {
+          // Someone else took this slot between page load and submit — clear the pick
+          // and refresh availability so the now-taken time shows as disabled right away.
+          setCallTimeSlot('')
+          fetch(`/api/availability?date=${callDate}`)
+            .then(r => r.json())
+            .then((d: { taken?: string[] }) => setTakenSlots(new Set(d.taken || [])))
+            .catch(() => {})
+        }
+        throw new Error(res.status === 409 ? t('contact.slotConflict') : body.error || t('contact.submitError'))
       }
       setSubmitted(true)
     } catch (err) {
@@ -408,7 +438,25 @@ function BookingFormSection() {
                         <p className="text-[11.5px] mt-1.5" style={{ color: 'var(--color-danger)', fontFamily: 'var(--font-body)' }}>{dateError}</p>
                       )}
                     </div>
-                    <SelectField label={t('contact.callTime')} name="callTimeSlot" options={TIME_SLOTS.map(formatSlot)} />
+                    <div>
+                      <label className="block text-[12px] font-semibold text-[var(--color-text-secondary)] mb-2 uppercase tracking-wide" style={{ fontFamily: 'var(--font-body)' }}>
+                        {t('contact.callTime')}
+                      </label>
+                      <select
+                        name="callTimeSlot"
+                        value={callTimeSlot}
+                        onChange={e => setCallTimeSlot(e.target.value)}
+                        className="w-full border border-[var(--color-border)] rounded-xl px-4 py-3 text-[14px] text-[var(--color-text-primary)] bg-[var(--color-bg)] focus:outline-none focus:border-[var(--color-primary)]"
+                        style={{ fontFamily: 'var(--font-body)' }}
+                      >
+                        <option value="" disabled>{t('contact.selectPlaceholder')}</option>
+                        {TIME_SLOTS.map(slot => (
+                          <option key={slot} value={slot} disabled={takenSlots.has(slot)}>
+                            {formatSlot(slot)}{takenSlots.has(slot) ? ` — ${t('contact.slotBooked')}` : ''}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
                   </div>
                   <p className="text-[11.5px] text-[var(--color-text-secondary)] -mt-2" style={{ fontFamily: 'var(--font-body)' }}>
                     {t('contact.callHoursNote')}
